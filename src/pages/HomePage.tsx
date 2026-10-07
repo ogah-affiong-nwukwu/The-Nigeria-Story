@@ -13,19 +13,12 @@ export default function HomePage() {
   return (
     <main>
       <section className="hero">
-        <div className="hero-bg" />
-        <div className="blob" style={{ background: 'rgba(223, 122, 71, 0.45)', width: '18rem', height: '18rem', left: '-6rem', top: '6rem' }} />
-        <div className="blob" style={{ background: 'rgba(71, 159, 118, 0.4)', width: '20rem', height: '20rem', right: '-5rem', top: '33%', animationDelay: '-3s' }} />
-        <div className="blob" style={{ background: 'rgba(229, 200, 95, 0.5)', width: '16rem', height: '16rem', left: '33%', bottom: '0', animationDelay: '-6s' }} />
-        <div className="pat-checker" style={{ position: 'absolute', inset: 0, opacity: 0.06 }} />
         <div className="hero__content">
           <p className="hero__eyebrow animate-rise">Naija · A Living Heritage Atlas</p>
           <h1 className="hero__title animate-rise" style={{ '--d': '120ms' } as CSSProperties}>
             Nigerian
             <br />
-            <span className="shimmer-text" style={{ '--terr-grad': '#c95b2a' } as CSSProperties}>
-              Cultural Atlas
-            </span>
+            <span className="hero__accent">Cultural Atlas</span>
           </h1>
           <p className="hero__sub animate-rise" style={{ '--d': '240ms' } as CSSProperties}>
             Explore Nigeria&apos;s Living Mosaic — a vibrant journey through the festivals, textiles,
@@ -89,8 +82,6 @@ export default function HomePage() {
       <section className="cta-wrap">
         <Reveal>
           <div className="cta-band">
-            <div className="cta-band__pat pat-north" style={{ opacity: 0.15 }} />
-            <div className="cta-band__pat pat-isi" style={{ opacity: 0.1 }} />
             <div className="cta-band__inner">
               <p className="cta-band__eyebrow">The mosaic awaits</p>
               <h2 className="cta-band__title">Enter a world of durbar thunder, talking drums and lion-cloth kings.</h2>

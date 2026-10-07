@@ -78,7 +78,6 @@ export default function CulturesPage() {
 
   return (
     <main className="page">
-      <div className="page__bg hero-bg" aria-hidden="true" />
       <div className="page__inner">
         <Reveal>
           <SectionHeading

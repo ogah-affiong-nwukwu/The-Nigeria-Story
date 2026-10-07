@@ -4,7 +4,6 @@ import { routes } from '../routes'
 export default function NotFoundPage() {
   return (
     <main className="notfound">
-      <div className="notfound__bg hero-bg" aria-hidden="true" />
       <div className="notfound__inner">
         <p className="notfound__code">404</p>
         <h1 className="notfound__title">Lost in the savannah</h1>

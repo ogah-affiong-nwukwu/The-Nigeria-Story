@@ -19,7 +19,6 @@ export default function CultureDetailPage() {
   if (!culture) {
     return (
       <main className="notfound">
-        <div className="notfound__bg hero-bg" aria-hidden="true" />
         <div className="notfound__inner">
           <p className="notfound__title">We couldn&apos;t find that culture.</p>
           <p className="notfound__text">
@@ -90,10 +89,7 @@ export default function CultureDetailPage() {
           <p className="detail-hero__tagline">{culture.tagline}</p>
         </div>
       </section>
-      <div
-        className="detail-hero__strip"
-        style={{ background: `linear-gradient(90deg, ${palette.primary}, ${palette.secondary}, ${palette.primary})` }}
-      />
+      <div className="detail-hero__strip" style={{ background: palette.primary }} />
 
       <div className="detail-body">
         <Reveal>

@@ -5,7 +5,7 @@ import { routes } from '../routes'
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer__strip" style={{ background: `linear-gradient(90deg, ${swatchColors.join(', ')})` }} />
+      <div className="footer__strip" style={{ background: '#c95b2a' }} />
       <div className="footer__grid">
         <div>
           <p className="footer__brand">

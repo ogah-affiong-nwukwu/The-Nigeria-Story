@@ -142,7 +142,7 @@ const coreCultures: Culture[] = [
         name: 'Nnamdi Azikiwe',
         title: 'First President of Nigeria',
         era: '1904–1996',
-      image:
+        image:
         'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Dr._Nnamdi_Azikiwe.jpg/960px-Dr._Nnamdi_Azikiwe.jpg',
         summary:
           'Journalist, nationalist and statesman known as \u2018Zik of Africa\u2019, he led the fight for independence and shaped Nigeria\u2019s post-colonial vision.',
@@ -152,7 +152,7 @@ const coreCultures: Culture[] = [
         name: 'Chinua Achebe',
         title: 'Father of Modern African Literature',
         era: '1930–2013',
-      image:
+        image:
         'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Chinua_Achebe_-_Buffalo_25Sep2008_crop.jpg/960px-Chinua_Achebe_-_Buffalo_25Sep2008_crop.jpg',
         summary:
           'His novel Things Fall Apart (1958) redefined how the world reads Africa, told through Igbo eyes with unflinching grace.',
@@ -162,7 +162,7 @@ const coreCultures: Culture[] = [
         name: 'Olaudah Equiano',
         title: 'Abolitionist & Author',
         era: 'c. 1745–1797',
-      image:
+        image:
         'https://upload.wikimedia.org/wikipedia/commons/c/c0/Daniel_Orme%2C_W._Denton_-_Olaudah_Equiano_%28Gustavus_Vassa%29%2C_1789.png',
         summary:
           'Kidnapped from an Igbo village as a boy, he purchased his freedom and wrote a best-selling memoir that fuelled the movement to end the slave trade.',
@@ -172,7 +172,7 @@ const coreCultures: Culture[] = [
         name: 'Flora Nwapa',
         title: 'Pioneering Novelist',
         era: '1931–1993',
-      image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Flora_Nwapa.jpg/960px-Flora_Nwapa.jpg',
+        image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Flora_Nwapa.jpg/960px-Flora_Nwapa.jpg',
         summary:
           'Author of Efuru, she became the first African woman to publish a novel in English and a trailblazing publisher of women\u2019s writing.',
         significance: 'Opened global literary doors for generations of African women writers.',
@@ -181,7 +181,7 @@ const coreCultures: Culture[] = [
         name: 'Eze Nri Ìfikuánim',
         title: 'First Priest-King of Nri',
         era: '9th Century',
-      image:
+        image:
         'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Ifikuanim_I_Eze_Nri_from_1043-1158.jpg/960px-Ifikuanim_I_Eze_Nri_from_1043-1158.jpg',
         summary:
           'Legendary founder of the Nri kingdom, whose ritual authority over peace, yam cultivation and cleansing spread across Igboland.',
@@ -191,7 +191,7 @@ const coreCultures: Culture[] = [
         name: 'King Jaja of Opobo',
         title: 'Merchant King of the Niger Delta',
         era: '1821–1891',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Jaja_of_Opobo.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Jaja_of_Opobo.jpg',
         summary:
           'Born in Igboland and sold into slavery as a boy, he rose to lead the Anna Pepple house, founded the kingdom of Opobo and built a palm-oil trading empire.',
         significance: 'Symbol of resistance against colonial monopoly over West African trade.',
@@ -378,7 +378,7 @@ const coreCultures: Culture[] = [
         name: 'Moremi Ajasoro',
         title: 'Heroine of Ile-Ife',
         era: 'c. 12th Century',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Moremi_Ajasoro_statue.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/1/13/Moremi_Ajasoro_statue.jpg',
         summary:
           'A queen who infiltrated the enemy to save her people, immortalised in the Edi festival and the Moremi statue of Ife.',
         significance: 'Enduring emblem of courage and self-sacrifice.',
@@ -387,7 +387,7 @@ const coreCultures: Culture[] = [
         name: 'Funmilayo Ransome-Kuti',
         title: 'Women\u2019s Rights Pioneer',
         era: '1900–1978',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Funmilayo_Ransome-Kuti_graduate.png',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Funmilayo_Ransome-Kuti_graduate.png',
         summary:
           'Teacher, activist and the first Nigerian woman to drive a car; she led the Abeokuta Women\u2019s Union against unfair taxation.',
         significance: 'Mother of Nigerian feminism — and of Fela Kuti.',
@@ -396,7 +396,7 @@ const coreCultures: Culture[] = [
         name: 'Fela Anikulapo-Kuti',
         title: 'Creator of Afrobeat',
         era: '1938–1997',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/1/11/Fela_Kuti_%28cropped%29.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/1/11/Fela_Kuti_%28cropped%29.jpg',
         summary:
           'Multi-instrumentalist and fearless critic of power, he forged Afrobeat and lived a revolution of rhythm and defiance.',
         significance: 'Africa\u2019s most influential musician of the 20th century.',
@@ -405,7 +405,7 @@ const coreCultures: Culture[] = [
         name: 'Wole Soyinka',
         title: 'Nobel Laureate',
         era: 'b. 1934',
-      image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Wole_Soyinka_in_2018.jpg/960px-Wole_Soyinka_in_2018.jpg',
+        image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Wole_Soyinka_in_2018.jpg/960px-Wole_Soyinka_in_2018.jpg',
         summary:
           'Playwright, poet and essayist whose works fuse Yoruba myth with global politics — the first African to win the Nobel Prize in Literature (1986).',
         significance: 'Africa\u2019s literary conscience for over six decades.',
@@ -414,7 +414,7 @@ const coreCultures: Culture[] = [
         name: 'Samuel Ajayi Crowther',
         title: 'Linguist & First African Bishop',
         era: 'c. 1809–1891',
-      image:
+        image:
         'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Bishop_Samuel_Ajayi_Crowther_1867.png/960px-Bishop_Samuel_Ajayi_Crowther_1867.png',
         summary:
           'Rescued from a slave ship and educated in Freetown, he became the first African Anglican bishop and translated the Bible into Yoruba.',
@@ -592,7 +592,7 @@ const coreCultures: Culture[] = [
         name: 'Queen Amina of Zazzau',
         title: 'Warrior Queen',
         era: 'c. 1533–1610',
-      image:
+        image:
         'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Queen_Amina_of_Zazzau.jpg/960px-Queen_Amina_of_Zazzau.jpg',
         summary:
           'The fierce ruler of Zazzau (Zaria) who led armies in person, built walled fortresses across Hausaland and forged new trade routes.',
@@ -602,7 +602,7 @@ const coreCultures: Culture[] = [
         name: 'Usman dan Fodio',
         title: 'Founder of the Sokoto Caliphate',
         era: '1754–1817',
-      image:
+        image:
         'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/The_tomb_of_Usman_dan_Fodio.png/960px-The_tomb_of_Usman_dan_Fodio.png',
         summary:
           'Islamic scholar and leader of the 1804 jihad that united Hausa states into the Sokoto Caliphate — one of the largest empires in Africa.',
@@ -612,7 +612,7 @@ const coreCultures: Culture[] = [
         name: 'Nana Asma\u2019u',
         title: 'Scholar & Poet',
         era: '1793–1864',
-      image:
+        image:
         'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Nana_Asma%27u_Calligraphy_02.png/960px-Nana_Asma%27u_Calligraphy_02.png',
         summary:
           'Daughter of Usman dan Fodio, she wrote poetry in Fulfulde, Hausa and Arabic and founded the Yan Taru — a network of women educators.',
@@ -622,7 +622,7 @@ const coreCultures: Culture[] = [
         name: 'Muhammadu Rumfa',
         title: 'Sultan of Kano',
         era: '1463–1499',
-      image:
+        image:
         'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Gidan_Rumfa-_Emir_Palace_Kano.jpg/960px-Gidan_Rumfa-_Emir_Palace_Kano.jpg',
         summary:
           'The visionary Sarkin Kano who rebuilt the city with the Kurmi market, city walls and palace that made Kano a commercial empire.',
@@ -632,7 +632,7 @@ const coreCultures: Culture[] = [
         name: 'Sir Ahmadu Bello',
         title: 'Sardauna of Sokoto',
         era: '1910–1966',
-      image:
+        image:
         'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Ahmadu_Bello_Premier_of_the_Northern_Region_of_Nigeria_1960_Oak_Ridge_%2824578438519%29.jpg/960px-Ahmadu_Bello_Premier_of_the_Northern_Region_of_Nigeria_1960_Oak_Ridge_%2824578438519%29.jpg',
         summary:
           'Premier of Northern Nigeria and descendant of dan Fodio, who championed unity and education across the region.',
@@ -803,7 +803,7 @@ const coreCultures: Culture[] = [
         name: 'Isaac Adaka Boro',
         title: 'The Revolutionist',
         era: '1938–1968',
-      image:
+        image:
         'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Monument_of_Isaac_Adaka_Boro_5.jpg/960px-Monument_of_Isaac_Adaka_Boro_5.jpg',
         summary:
           'Student leader and soldier who declared the Niger Delta Republic in 1966, fighting for justice for his riverine people.',
@@ -821,7 +821,7 @@ const coreCultures: Culture[] = [
         name: 'John Pepper Clark',
         title: 'Poet & Playwright',
         era: '1935–2020',
-      image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/EK%2C_BA_and_JP_Clark.jpg/960px-EK%2C_BA_and_JP_Clark.jpg',
+        image: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/EK%2C_BA_and_JP_Clark.jpg/960px-EK%2C_BA_and_JP_Clark.jpg',
         summary:
           'From Abiku to Ozidi, he turned Delta myth and waterland into some of Africa\u2019s finest verse and drama.',
         significance: 'Titan of Nigerian literature\u2019s golden generation.',
@@ -830,7 +830,7 @@ const coreCultures: Culture[] = [
         name: 'Goodluck Jonathan',
         title: 'President of Nigeria',
         era: 'b. 1957',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/0/09/Goodluck_Jonathan_2014.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/0/09/Goodluck_Jonathan_2014.jpg',
         summary:
           'Zoologist turned statesman, the first Nigerian president from the Niger Delta (2010–2015), celebrated for conceding power peacefully.',
         significance: 'Symbol of a new democratic maturity.',
@@ -1002,7 +1002,7 @@ const coreCultures: Culture[] = [
         name: 'J. S. Tarka',
         title: 'Father of Benue Politics',
         era: '1932–1980',
-      image: 'https://upload.wikimedia.org/wikipedia/en/f/ff/Foundi7.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/en/f/ff/Foundi7.jpg',
         summary:
           'Senator and champion of the Middle Belt minority, who led the United Middle Belt Congress in the struggle for representation.',
         significance: 'Defender of minorities in Nigeria\u2019s first republic.',
@@ -1019,7 +1019,7 @@ const coreCultures: Culture[] = [
         name: 'Aper Aku',
         title: 'The People\u2019s Governor',
         era: '1938–1988',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Gov._Aper_Aku.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Gov._Aper_Aku.jpg',
         summary:
           'First civilian governor of Benue State, remembered for mass education and grassroot development.',
         significance: 'A legend of progressive leadership.',
@@ -1181,7 +1181,7 @@ const coreCultures: Culture[] = [
         name: 'Margaret Ekpo',
         title: 'Women\u2019s Rights Champion',
         era: '1914–2006',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/b/bc/Margaret_ekpo.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/b/bc/Margaret_ekpo.jpg',
         summary:
           'Activist and politician from Calabar who mobilised market women and became one of Nigeria\u2019s first female political leaders.',
         significance: 'A founding mother of Nigerian feminism.',
@@ -1190,7 +1190,7 @@ const coreCultures: Culture[] = [
         name: 'King Eyo Honesty II',
         title: 'Obong of Creek Town',
         era: '19th Century',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/King_Eyo_Honesty_II.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/King_Eyo_Honesty_II.jpg',
         summary:
           'The merchant king who signed treaties with the British and ruled the palm-oil trade of Old Calabar\u2019s golden age.',
         significance: 'Builder of Calabar\u2019s trading empire.',
@@ -1199,7 +1199,7 @@ const coreCultures: Culture[] = [
         name: 'Hogan \u2018Kid\u2019 Bassey',
         title: 'World Champion',
         era: '1932–1998',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Hogan_Bassey.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/8/8e/Hogan_Bassey.jpg',
         summary:
           'The Calabar-born boxer who won the world featherweight title in 1957 — the first Nigerian world champion.',
         significance: 'A sporting icon of Nigerian pride.',

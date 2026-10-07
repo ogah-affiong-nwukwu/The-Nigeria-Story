@@ -80,12 +80,25 @@ src/
 ```
 
 ### Adding a new tribe (open for extension, closed for modification)
-
 1. Append one object to `src/data/moreCultures.ts` following the `Culture` interface —
    that's it. The directory grid, live search, zone chips, footer links, and the deep-dive
    page (tabs, figures, families) all pick it up automatically.
 2. If the new tribe belongs to a brand-new region, add its zone name to the `zones` array
    in `src/data/cultures.ts` (the filter chips regenerate themselves).
+
+### Imagery & manual overrides
+
+Every figure and family card resolves its media in two steps, so nothing ever renders broken:
+
+1. **Public URL** — `image: 'https://…'` on the entry object (Wikimedia Commons/Wikipedia
+   sources, curated in `src/data/`).
+2. **Text-only editorial card** — entries with no image (and any image that fails at
+   runtime) render without a media box entirely: a clean, bordered text block with the
+   name, era flag, and description. No silhouettes, no initials.
+
+To use your own photo for any figure or family: drop the file into `public/images/figures/`
+and set the entry's `image` to a site-relative path, e.g. `image: '/images/figures/my-photo.jpg'`.
+Any path starting with `/` is served as-is by Vite — no code changes needed.
 
 ## Engineering Notes
 

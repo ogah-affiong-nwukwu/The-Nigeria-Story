@@ -9,10 +9,10 @@ import FigureCard from '../components/FigureCard'
 import Tabs from '../components/Tabs'
 
 const foundersPalette = {
-  primary: '#c95b2a',
-  secondary: '#d19e26',
-  pa: 'rgba(201,91,42,0.16)',
-  pb: 'rgba(209,158,38,0.15)',
+  primary: '#2f5d3f',
+  secondary: '#4e7a5c',
+  pa: 'rgba(47,93,63,0.18)',
+  pb: 'rgba(31,27,22,0.12)',
 }
 
 const anthemTabs: TabItem[] = anthems.map(anthem => ({
@@ -40,17 +40,12 @@ const anthemTabs: TabItem[] = anthems.map(anthem => ({
 
 export default function StoryPage() {
   return (
-    <main>
-      <section className="hero">
-        <div className="hero-bg" />
-        <div className="pat-checker" style={{ position: 'absolute', inset: 0, opacity: 0.05 }} />
+    <main className="story-page">
+      <section className="hero story-hero">
         <div className="hero__content">
           <p className="hero__eyebrow animate-rise">The Nigerian Story</p>
           <h1 className="hero__title animate-rise" style={{ '--d': '120ms' } as CSSProperties}>
-            From Nok to a{' '}
-            <span className="shimmer-text" style={{ '--terr-grad': '#c95b2a' } as CSSProperties}>
-              Nation
-            </span>
+            From Nok to a <span className="story-hero__accent">Nation</span>
           </h1>
           <p className="hero__sub animate-rise" style={{ '--d': '240ms' } as CSSProperties}>
             Thirteen chapters of empires and iron, five founding fathers, and the songs that bind a
@@ -110,22 +105,17 @@ export default function StoryPage() {
         </Reveal>
       </section>
 
-      <section className="cta-wrap">
+      <section className="story-cta-wrap">
         <Reveal>
-          <div className="cta-band">
-            <div className="cta-band__pat pat-north" style={{ opacity: 0.15 }} />
-            <div className="cta-band__inner">
-              <p className="cta-band__eyebrow">The atlas awaits</p>
-              <h2 className="cta-band__title">Seventeen worlds, one living mosaic.</h2>
-              <p className="cta-band__desc">
-                Walk into the festivals, textiles and legends of Nigeria&apos;s great peoples.
-              </p>
-              <div className="cta-band__actions">
-                <Link to={routes.tribes} className="btn btn-gold btn--lg">
-                  Explore the Tribes →
-                </Link>
-              </div>
-            </div>
+          <div className="story-cta">
+            <p className="story-cta__eyebrow">The atlas awaits</p>
+            <h2 className="story-cta__title">Seventeen worlds, one living mosaic.</h2>
+            <p className="story-cta__desc">
+              Walk into the festivals, textiles and legends of Nigeria&apos;s great peoples.
+            </p>
+            <Link to={routes.tribes} className="btn story-cta__btn">
+              Explore the Tribes →
+            </Link>
           </div>
         </Reveal>
       </section>

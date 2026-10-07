@@ -142,6 +142,7 @@ export const moreCultures: Culture[] = [
         name: 'Bruce Onobrakpeya',
         title: 'Master Printmaker',
         era: 'b. 1932',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Bruce_Onobrakpeya_The_Pride_of_all_nigerians.jpg',
         summary:
           'Painter, sculptor and printmaker whose plastocast and deep-etch techniques made him a global art legend from Agbarha-Otor.',
         significance: 'The bridge between Benin bronze tradition and Nigerian modernism.',
@@ -150,6 +151,7 @@ export const moreCultures: Culture[] = [
         name: 'David Dafinone',
         title: 'Senator & Accountant',
         era: '1927–2018',
+        image: 'https://upload.wikimedia.org/wikipedia/en/f/f7/David_Dafinone.jpg',
         summary:
           'Pioneering chartered accountant, senator and community builder who mentored a generation of Delta professionals.',
         significance: 'Helped shape Nigerian accounting standards.',
@@ -302,6 +304,8 @@ export const moreCultures: Culture[] = [
         name: 'Oba Ewuare the Great',
         title: 'Architect of Empire',
         era: '1440–1473',
+        image:
+        'https://upload.wikimedia.org/wikipedia/commons/d/d5/Oba_Ewuare_I%2C_Benin_Bronzes%2C_Horniman_Museum_4_%28cropped%29.jpg',
         summary:
           'The warrior-poet Oba who rebuilt Benin City, created the palace chieftaincy system and expanded the empire to its height.',
         significance: 'Shaped Benin\u2019s golden age.',
@@ -320,6 +324,8 @@ export const moreCultures: Culture[] = [
         name: 'Oba Ovonramwen',
         title: 'The Last Independent Oba',
         era: '1857–1914',
+        image:
+        'https://upload.wikimedia.org/wikipedia/commons/5/5a/Ovonramwen_Nogbaisi_with_his_two_wives_in_Calabar%2C_c1912_%28cropped%29.jpg',
         summary:
           'Ruled when the British punitive expedition of 1897 sacked Benin City; he died in exile at Calabar.',
         significance: 'Embodiment of Benin\u2019s defiance.',
@@ -328,6 +334,7 @@ export const moreCultures: Culture[] = [
         name: 'Oba Akenzua II',
         title: 'Moderniser King',
         era: '1933–1978',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Oba_Akenzua_II%2C_1936_0327.0008.jpg',
         summary:
           'Restored the palace, founded schools and brought Benin\u2019s bronzes to global attention.',
         significance: 'The bridge between empire and republic.',
@@ -482,6 +489,8 @@ export const moreCultures: Culture[] = [
         name: 'Modibbo Adama',
         title: 'Founder of Adamawa',
         era: '1786–1847',
+        image:
+        'https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Gate_of_Lamido_Palace.jpg/960px-Gate_of_Lamido_Palace.jpg',
         summary:
           'Dan Fodio\u2019s lieutenant who conquered and founded the Adamawa Emirate, from Yola to the Cameroons.',
         significance: 'Namesake of the Lamido dynasty of Adamawa.',
@@ -490,6 +499,8 @@ export const moreCultures: Culture[] = [
         name: 'Umaru Musa Yar\u2019Adua',
         title: 'President of Nigeria',
         era: '1951–2010',
+        image:
+        'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Umaru_YarAdua_080630-F-1644L-111.jpg/960px-Umaru_YarAdua_080630-F-1644L-111.jpg',
         summary:
           'Scholar-descendant of the Katsina aristocracy who became president of Nigeria (2007–2010).',
         significance: 'Symbol of northern reform and academic leadership.',
@@ -498,6 +509,8 @@ export const moreCultures: Culture[] = [
         name: 'Muhammadu Buhari',
         title: 'President of Nigeria',
         era: 'b. 1942',
+        image:
+        'https://upload.wikimedia.org/wikipedia/commons/b/bb/Muhammadu_Buhari%2C_President_of_the_Federal_Republic_of_Nigeria_%283x4_cropped%29.jpg',
         summary:
           'Retired general from Daura and two-time president (1983–85 and 2015–2023).',
         significance: 'A defining figure of modern Nigerian politics.',
@@ -660,6 +673,7 @@ export const moreCultures: Culture[] = [
         name: 'Sheikh Muhammad El-Kanemi',
         title: 'Saviour of Borno',
         era: '1776–1837',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Muhammad_al-Amin_al-Kanemi.png',
         summary:
           'The scholar who repelled the Sokoto jihad\u2019s assault on Borno and founded the El-Kanemi dynasty.',
         significance: 'Rebuilder of the Shehu throne.',
@@ -668,6 +682,7 @@ export const moreCultures: Culture[] = [
         name: 'Sir Kashim Ibrahim',
         title: 'First Among Northerners',
         era: '1910–1990',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/e/ec/Kashim_Ibrahim.jpg',
         summary:
           'Kanuri politician, federal minister and Governor of Northern Nigeria (1962–66).',
         significance: 'The voice of the Kanem-Bornu legacy in modern Nigeria.',
@@ -816,6 +831,8 @@ export const moreCultures: Culture[] = [
         name: 'Ameh Ebute',
         title: 'Senate President',
         era: 'b. 1946',
+        image:
+        'https://upload.wikimedia.org/wikipedia/commons/c/c2/Sen._Ameh_Ebute_%286th_Senate_President_%28Military%29.jpg',
         summary:
           'The Idoma lawyer and politician who served as Nigeria\u2019s Senate President in the Third Republic.',
         significance: 'The highest Idoma voice in national politics.',
@@ -990,6 +1007,8 @@ export const moreCultures: Culture[] = [
         name: 'Onofiok Luke',
         title: 'Speaker & Lawmaker',
         era: 'b. 1978',
+        image:
+        'https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Rt._Hon._%28Barr%29_Onofiok_Luke%2C_Speaker%2C_Akwa_Ibom_State_House_of_Asembly.jpg/960px-Rt._Hon._%28Barr%29_Onofiok_Luke%2C_Speaker%2C_Akwa_Ibom_State_House_of_Asembly.jpg',
         summary:
           'Young Speaker of the Akwa Ibom House of Assembly who championed youth in governance.',
         significance: 'New-generation Annang leadership.',
@@ -1298,6 +1317,7 @@ export const moreCultures: Culture[] = [
         name: 'Yahaya Bello',
         title: 'Kogi\u2019s Young Governor',
         era: 'b. 1975',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/IMG-20230701-WA0024_%28cropped%29.jpg',
         summary:
           'Two-term governor of Kogi State from the Ebira heartland (2016–2024).',
         significance: 'New-generation Ebira power.',
@@ -1438,6 +1458,8 @@ export const moreCultures: Culture[] = [
         name: 'Tsoede (Edegi)',
         title: 'Founder of the Nupe Kingdom',
         era: '15th Century',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/7/73/Tsoede%2C_founding_father_of_the_Nupe_Kingdom_in_Niger_State.jpg',
         summary:
           'Legendary prince who rode out of Idah and forged the Nupe nation on the banks of the Niger.',
         significance: 'Nupe\u2019s origin figure.',
@@ -1601,6 +1623,8 @@ export const moreCultures: Culture[] = [
         name: 'Aku Uka Shekarau Angyu Masa-Ibi',
         title: 'The Long Reign',
         era: '1937–2015',
+        image:
+        'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Kuvyon_II_Shekarau_Angyu_Masa-Ibi_%281976-2021%29%2C_Aku_Uka_of_Wukari.jpg/960px-Kuvyon_II_Shekarau_Angyu_Masa-Ibi_%281976-2021%29%2C_Aku_Uka_of_Wukari.jpg',
         summary:
           'One of the longest-serving Aku Uka in history (1976–2015), presiding over decades of change.',
         significance: 'Keeper of the stool in modern times.',

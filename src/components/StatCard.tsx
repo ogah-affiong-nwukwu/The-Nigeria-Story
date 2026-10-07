@@ -3,7 +3,7 @@ import type { Stat } from '../data/cultures'
 export default function StatCard({ stat }: { stat: Stat }) {
   return (
     <article className="stat-card">
-      <div className="stat-card__bar" style={{ background: `linear-gradient(90deg, ${stat.accent}, transparent)` }} />
+      <div className="stat-card__bar" style={{ background: stat.accent }} />
       <p className="stat-card__value" style={{ color: stat.accent }}>
         {stat.value}
       </p>
