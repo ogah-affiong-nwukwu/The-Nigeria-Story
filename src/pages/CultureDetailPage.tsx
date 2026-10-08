@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import type { CSSProperties } from 'react'
-import { cultures } from '../data/cultures'
 import { routes } from '../routes'
+import { useCultures } from '../data/useCultures'
 import type { TabItem } from '../components/Tabs'
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
@@ -14,6 +14,7 @@ import CultureChip from '../components/CultureChip'
 
 export default function CultureDetailPage() {
   const { cultureId } = useParams<{ cultureId: string }>()
+  const { cultures } = useCultures()
   const culture = cultures.find(candidate => candidate.id === cultureId)
 
   if (!culture) {

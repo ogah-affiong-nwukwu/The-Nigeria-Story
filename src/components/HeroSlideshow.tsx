@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 interface Slide {
   image: string
   alt: string
@@ -31,23 +33,56 @@ const slides: Slide[] = [
 ]
 
 const SLIDE_SECONDS = 6
-const CYCLE_SECONDS = slides.length * SLIDE_SECONDS
 
 export default function HeroSlideshow() {
+  const [active, setActive] = useState(0)
+  const [paused, setPaused] = useState(false)
+  const [tick, setTick] = useState(0)
+
+  useEffect(() => {
+    if (paused) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const id = window.setInterval(() => {
+      setActive(current => (current + 1) % slides.length)
+    }, SLIDE_SECONDS * 1000)
+    return () => window.clearInterval(id)
+  }, [paused, tick])
+
+  function goTo(index: number) {
+    setActive(index)
+    setTick(current => current + 1)
+  }
+
   return (
-    <div className="hero-slideshow" aria-hidden="true">
+    <div
+      className="hero-slideshow"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       {slides.map((slide, index) => (
         <div
           key={slide.image}
-          className="hero-slideshow__slide"
-          style={{
-            backgroundImage: `url("${slide.image}")`,
-            animation: `hero-slide-fade ${CYCLE_SECONDS}s ease-in-out ${index * SLIDE_SECONDS}s infinite`,
-          }}
+          className={`hero-slideshow__slide${index === active ? ' is-active' : ''}`}
+          style={{ backgroundImage: `url("${slide.image}")` }}
           role="presentation"
         />
       ))}
-      <div className="hero-slideshow__overlay" />
+      <div className="hero-slideshow__overlay" aria-hidden="true" />
+      <div className="hero-slideshow__rail" role="group" aria-label="Browse hero slides">
+        <span className="hero-slideshow__rail-num" aria-hidden="true">
+          {String(active + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')}
+        </span>
+        {slides.map((slide, index) => (
+          <button
+            key={slide.image}
+            type="button"
+            className={`hero-slideshow__dot${index === active ? ' is-active' : ''}`}
+            aria-label={`Show slide ${index + 1}: ${slide.alt}`}
+            aria-current={index === active}
+            onClick={() => goTo(index)}
+          />
+        ))}
+      </div>
     </div>
   )
 }

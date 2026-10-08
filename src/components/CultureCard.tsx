@@ -26,7 +26,7 @@ export default function CultureCard({ culture, index }: CultureCardProps) {
           <img src={culture.image} alt="" loading="lazy" />
         </span>
       )}
-      <span className="culture-row__go">Enter →</span>
+      <span className="culture-row__more">Read more &gt;</span>
     </Link>
   )
 }

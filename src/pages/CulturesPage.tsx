@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
-import { cultures, zones } from '../data/cultures'
+import { zones } from '../data/cultures'
 import type { Culture } from '../data/cultures'
+import { useCultures } from '../data/useCultures'
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
 import CultureCard from '../components/CultureCard'
@@ -44,6 +45,7 @@ function similarityScore(culture: Culture, query: string): number {
 }
 
 export default function CulturesPage() {
+  const { cultures } = useCultures()
   const [query, setQuery] = useState('')
   const [zone, setZone] = useState('')
   const normalizedQuery = normalize(query)
@@ -64,7 +66,7 @@ export default function CulturesPage() {
         .join(' ')
       return haystack.includes(normalizedQuery)
     })
-  }, [normalizedQuery, zone])
+  }, [cultures, normalizedQuery, zone])
 
   const suggestions = useMemo(() => {
     if (!normalizedQuery || filtered.length > 0) return []
@@ -74,7 +76,7 @@ export default function CulturesPage() {
       .sort((a, b) => b.score - a.score)
       .slice(0, 3)
       .map(entry => entry.culture)
-  }, [normalizedQuery, filtered])
+  }, [cultures, normalizedQuery, filtered])
 
   return (
     <main className="page">

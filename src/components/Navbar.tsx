@@ -11,10 +11,19 @@ const links = [
 function BrandMark({ className = '' }: { className?: string }) {
   return (
     <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
-      <rect x="4" y="4" width="40" height="40" fill="#a63f1a" />
-      <rect x="12" y="12" width="24" height="24" fill="none" stroke="#c09636" strokeWidth="2.5" transform="rotate(45 24 24)" />
-      <circle cx="24" cy="24" r="5.5" fill="none" stroke="#f6ecda" strokeWidth="2" />
-      <circle cx="24" cy="24" r="1.8" fill="#f6ecda" />
+      <rect x="4" y="4" width="40" height="40" style={{ fill: 'var(--brand-mark)' }} />
+      <rect
+        x="12"
+        y="12"
+        width="24"
+        height="24"
+        fill="none"
+        strokeWidth="2.5"
+        transform="rotate(45 24 24)"
+        style={{ stroke: 'var(--brand-diamond)' }}
+      />
+      <circle cx="24" cy="24" r="5.5" fill="none" strokeWidth="2" style={{ stroke: 'var(--brand-core)' }} />
+      <circle cx="24" cy="24" r="1.8" style={{ fill: 'var(--brand-core)' }} />
     </svg>
   )
 }
@@ -44,8 +53,8 @@ export default function Navbar() {
               {({ isActive }) => <span aria-current={isActive ? 'page' : undefined}>{link.label}</span>}
             </NavLink>
           ))}
-          <ThemeToggle />
         </div>
+        <ThemeToggle />
       </nav>
     </header>
   )

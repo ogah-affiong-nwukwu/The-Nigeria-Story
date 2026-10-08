@@ -110,9 +110,8 @@ export default function HomePage() {
               <blockquote className="feature-quote">“{featured.tagline}”</blockquote>
               <p className="feature-text">{featured.teaser}</p>
               <div className="feature-actions">
-                <Link to={routes.tribe(featured.id)} className="btn btn-primary">
-                  Open the entry
-                  <span className="btn__arrow">→</span>
+                <Link to={routes.tribe(featured.id)} className="read-more">
+                  Read more &gt;
                 </Link>
               </div>
             </div>

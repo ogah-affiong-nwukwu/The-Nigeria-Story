@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react'
 const STORAGE_KEY = 'nca-theme'
 
 function initialTheme(): 'light' | 'dark' {
-  if (typeof window === 'undefined') return 'light'
+  if (typeof window === 'undefined') return 'dark'
   const saved = window.localStorage.getItem(STORAGE_KEY)
   if (saved === 'light' || saved === 'dark') return saved
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  return 'dark'
 }
 
 function SunIcon({ className = '' }: { className?: string }) {
