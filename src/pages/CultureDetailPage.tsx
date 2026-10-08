@@ -20,13 +20,13 @@ export default function CultureDetailPage() {
     return (
       <main className="notfound">
         <div className="notfound__inner">
-          <p className="notfound__title">We couldn&apos;t find that culture.</p>
+          <p className="notfound__title">We couldn&apos;t find that people.</p>
           <p className="notfound__text">
-            The mosaic is vast — but this path leads nowhere. Try the directory instead.
+            The archive is vast — but this trail leads nowhere. Try the index instead.
           </p>
           <div className="notfound__actions">
             <Link to={routes.tribes} className="btn btn-solid">
-              Browse cultures
+              Browse the peoples
             </Link>
             <Link to={routes.home} className="btn btn-outline">
               Home
@@ -54,7 +54,7 @@ export default function CultureDetailPage() {
   const facts = [
     { label: 'Region', value: culture.region },
     { label: 'Language', value: culture.language },
-    { label: 'Key Tradition', value: culture.keyTradition },
+    { label: 'Key tradition', value: culture.keyTradition },
   ]
 
   const others = cultures.filter(candidate => candidate.id !== culture.id).slice(0, 2)
@@ -78,7 +78,7 @@ export default function CultureDetailPage() {
           <nav className="crumbs" aria-label="Breadcrumb">
             <Link to={routes.home}>Home</Link>
             <span aria-hidden="true">/</span>
-            <Link to={routes.tribes}>Tribes</Link>
+            <Link to={routes.tribes}>The Peoples</Link>
             <span aria-hidden="true">/</span>
             <span aria-current="page">{culture.name}</span>
           </nav>
@@ -86,10 +86,10 @@ export default function CultureDetailPage() {
             {culture.people} · {culture.language}
           </p>
           <h1 className="detail-hero__title">{culture.name}</h1>
-          <p className="detail-hero__tagline">{culture.tagline}</p>
+          <p className="detail-hero__tagline">“{culture.tagline}”</p>
         </div>
       </section>
-      <div className="detail-hero__strip" style={{ background: palette.primary }} />
+      <div className="detail-hero__strip" />
 
       <div className="detail-body">
         <Reveal>
@@ -102,21 +102,22 @@ export default function CultureDetailPage() {
                 </div>
               ))}
             </div>
-            <Link to={routes.tribes} className="btn btn-outline btn--sm btn-back">
-              ← All tribes
+            <Link to={routes.tribes} className="btn btn-outline btn--sm">
+              <span className="btn__arrow">←</span>
+              All peoples
             </Link>
           </div>
         </Reveal>
 
         <Reveal>
-          <p className="detail-teaser">{culture.teaser}</p>
+          <p className="detail-teaser dropcap">{culture.teaser}</p>
         </Reveal>
 
         <Reveal className="detail-section">
           <SectionHeading
-            eyebrow="Deep-dive"
-            title="Traditions, Style & Rhythm"
-            description={`Tap through the tabs to explore ${culture.name} festivals, textiles, music and craft.`}
+            eyebrow="The customs"
+            title="Traditions, style & rhythm"
+            description={`Turn the pages below — the festivals, cloth, music and craft that keep ${culture.name} memory alive.`}
           />
         </Reveal>
         <Reveal>
@@ -125,14 +126,14 @@ export default function CultureDetailPage() {
 
         <Reveal className="detail-section detail-section--figures">
           <SectionHeading
-            eyebrow="Legends & icons"
-            title={`Major Figures of the ${culture.name}`}
-            description="Rulers, warriors, writers and pioneers who shaped this heritage."
+            eyebrow="Keepers of memory"
+            title={`The people of the ${culture.name}`}
+            description="Rulers, warriors, writers and pioneers — the names this heritage will not let go of."
           />
         </Reveal>
         <div className="figures-grid">
           {culture.figures.map((figure, index) => (
-            <Reveal key={figure.name} delay={(index % 3) * 80} className="fill">
+            <Reveal key={figure.name} delay={(index % 2) * 80}>
               <FigureCard figure={figure} palette={palette} pattern={culture.pattern} />
             </Reveal>
           ))}
@@ -140,14 +141,14 @@ export default function CultureDetailPage() {
 
         <Reveal className="detail-section detail-section--figures">
           <SectionHeading
-            eyebrow="Legacy & lineage"
-            title={`Prominent Families of the ${culture.name}`}
-            description="Historic dynasties, royal houses and legacy families that shaped this heritage."
+            eyebrow="Houses & dynasties"
+            title={`Great families of the ${culture.name}`}
+            description="Historic dynasties, royal houses and legacy families — the long lineages that shaped this heritage."
           />
         </Reveal>
-        <div className="families-grid">
+        <div className="families-ledger">
           {culture.families.map((family, index) => (
-            <Reveal key={family.name} delay={(index % 3) * 80} className="fill">
+            <Reveal key={family.name} delay={(index % 2) * 80}>
               <FamilyCard family={family} palette={palette} pattern={culture.pattern} />
             </Reveal>
           ))}
@@ -155,16 +156,17 @@ export default function CultureDetailPage() {
 
         <Reveal>
           <div className="continue-box">
-            <h2 className="continue-box__title">Continue the journey</h2>
-            <p className="continue-box__sub">Two more worlds of the atlas await.</p>
+            <h2 className="continue-box__title">Further along the shelf</h2>
+            <p className="continue-box__sub">Two more worlds of the archive await.</p>
             <div className="continue-grid">
               {others.map(other => (
-                <CultureChip key={other.id} culture={other} />
+                <CultureChip key={other.id} culture={other} secondary={`${other.region} · ${other.keyTradition}`} />
               ))}
             </div>
             <div className="continue-actions">
               <Link to={routes.tribes} className="btn btn-solid">
-                ← All tribes
+                <span className="btn__arrow">←</span>
+                All peoples
               </Link>
               <Link to={routes.home} className="btn btn-outline">
                 Back to home

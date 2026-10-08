@@ -68,7 +68,6 @@ export default function Tabs({ tabs, className = '', label = 'Tabs' }: TabsProps
               onClick={() => selectTab(index, false)}
               onKeyDown={handleKeyDown}
               className={`tab${selected ? ' active' : ''}`}
-              style={selected ? { background: 'var(--c-primary, #c95b2a)' } : undefined}
             >
               {tab.label}
             </button>

@@ -5,10 +5,13 @@ import { routes } from '../routes'
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
 import StatCard from '../components/StatCard'
-import CultureChip from '../components/CultureChip'
+import CultureCard from '../components/CultureCard'
 import HeroSlideshow from '../components/HeroSlideshow'
+import ImageWithFallback from '../components/ImageWithFallback'
 
-const marqueeLine = `${marqueeWords.join(' • ')} • `
+const marqueeLine = `${marqueeWords.join('  ') + '  '}`
+
+const featured = cultures[0]
 
 export default function HomePage() {
   return (
@@ -16,29 +19,30 @@ export default function HomePage() {
       <section className="hero hero--media">
         <HeroSlideshow />
         <div className="hero__content">
-          <p className="hero__eyebrow animate-rise">Naija · A Living Heritage Atlas</p>
+          <p className="hero__eyebrow animate-rise">Vol. I · The Peoples of Nigeria</p>
           <h1 className="hero__title animate-rise" style={{ '--d': '120ms' } as CSSProperties}>
-            Nigerian
+            Seventeen worlds,
             <br />
-            <span className="hero__accent">Cultural Atlas</span>
+            <em className="hero__accent">one loud nation.</em>
           </h1>
-          <p className="hero__sub animate-rise" style={{ '--d': '240ms' } as CSSProperties}>
-            More than 250 peoples share the name Nigeria. This atlas walks through the festivals, cloth,
-            rhythms and icons of seventeen of its largest cultures — one page at a time.
+          <p className="hero__stand animate-rise" style={{ '--d': '240ms' } as CSSProperties}>
+            Behind the single name stands a country of <strong>250+ peoples</strong>. This archive opens
+            the doors of seventeen of them — their festivals, cloth, rhythms and legends, kept and
+            retold, one page at a time.
           </p>
           <div className="hero__actions animate-rise" style={{ '--d': '360ms' } as CSSProperties}>
             <Link to={routes.tribes} className="btn btn-primary">
-              Enter the Atlas
+              Enter the archive
               <span className="btn__arrow">→</span>
             </Link>
             <Link to={routes.story} className="btn btn-ghost">
               Read the Nigerian Story
             </Link>
-            <a href="#glimpse" className="btn btn-ghost">
-              Quick Glimpse ↓
-            </a>
           </div>
         </div>
+        <p className="hero__aside" aria-hidden="true">
+          Durbar thunder · Indigo pits · Talking drums
+        </p>
         <div className="marquee" aria-hidden="true">
           <div className="marquee__track">
             <span className="marquee__item">{marqueeLine}</span>
@@ -47,12 +51,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="glimpse" className="stats-section">
+      <section className="stats-section">
         <Reveal>
           <SectionHeading
-            eyebrow="At a glance"
-            title="A Nation of Firsts"
-            description="Nigeria's scale and depth are almost impossible to condense — but these numbers begin to sketch the picture."
+            eyebrow="The ledger"
+            title="First, the numbers"
+            description="Before the stories, the sheer scale of the place — a country that refuses to be summarised."
           />
         </Reveal>
         <div className="stats-grid">
@@ -64,36 +68,73 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="voices-section">
+      <section className="index-section">
         <Reveal>
-          <SectionHeading
-            eyebrow="The directory"
-            title="Voices of the Atlas"
-            description="Seventeen of Nigeria's great peoples open their doors — each with its own cloth, rhythm and legends."
-          />
+          <div className="index-head">
+            <SectionHeading
+              eyebrow="The index of peoples"
+              title="Seventeen doors into the nation"
+              description="Every entry opens on a world — its festivals, its textiles, its rhythms, its legends."
+            />
+            <Link to={routes.tribes} className="index-more">
+              Browse the full index
+            </Link>
+          </div>
         </Reveal>
-        <div className="voices-grid">
-          {cultures.map((culture, index) => (
+        <div className="index-list">
+          {cultures.slice(0, 8).map((culture, index) => (
             <Reveal key={culture.id} delay={index * 60}>
-              <CultureChip culture={culture} secondary={`${culture.region} · ${culture.keyTradition}`} />
+              <CultureCard culture={culture} index={index + 1} />
             </Reveal>
           ))}
         </div>
+      </section>
+
+      <section className="feature-section">
+        <Reveal>
+          <article className="feature-spread">
+            <div className="feature-media">
+              <ImageWithFallback
+                src={featured.image}
+                alt={`${featured.name} cultural imagery`}
+                monogram={featured.monogram}
+                pattern={featured.pattern}
+                colors={[featured.palette.pa, featured.palette.pb]}
+                className="imgbox--fill"
+              />
+              <p className="feature-media__label">{featured.people} · {featured.region}</p>
+            </div>
+            <div className="feature-body">
+              <p className="section-heading__eyebrow">From the archive</p>
+              <h2 className="feature-title">{featured.name}</h2>
+              <blockquote className="feature-quote">“{featured.tagline}”</blockquote>
+              <p className="feature-text">{featured.teaser}</p>
+              <div className="feature-actions">
+                <Link to={routes.tribe(featured.id)} className="btn btn-primary">
+                  Open the entry
+                  <span className="btn__arrow">→</span>
+                </Link>
+              </div>
+            </div>
+          </article>
+        </Reveal>
       </section>
 
       <section className="cta-wrap">
         <Reveal>
           <div className="cta-band">
             <div className="cta-band__inner">
-              <p className="cta-band__eyebrow">The mosaic awaits</p>
-              <h2 className="cta-band__title">Enter a world of durbar thunder, talking drums and lion-cloth kings.</h2>
+              <p className="cta-band__eyebrow">The archive is yours to wander</p>
+              <h2 className="cta-band__title">
+                A world of durbar thunder, talking drums and <em>lion-cloth kings.</em>
+              </h2>
               <p className="cta-band__desc">
-                Begin the journey through Nigeria&apos;s living heritage — one culture, one legend, one
-                festival at a time.
+                Begin at any door — a people, a festival, a legend. The archive is built to be wandered,
+                and it grows with every visit.
               </p>
               <div className="cta-band__actions">
                 <Link to={routes.tribes} className="btn btn-gold btn--lg">
-                  Explore the Tribes →
+                  Explore the peoples →
                 </Link>
               </div>
             </div>

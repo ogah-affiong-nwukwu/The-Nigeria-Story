@@ -14,26 +14,28 @@ export default function FigureCard({ figure, palette, pattern }: FigureCardProps
   const [imageFailed, setImageFailed] = useState(false)
   const showImage = Boolean(figure.image) && !imageFailed
 
-  if (!showImage) {
-    return (
-      <article className="figure-card figure-card--text">
-        <div className="figure-card__text-head">
-          <h3 className="figure-card__name">{figure.name}</h3>
-          <span className="figure-card__era-inline">{figure.era}</span>
-        </div>
+  const body = (
+    <div className="figure-card__body">
+      <div>
+        {!showImage && <span className="figure-card__era-inline">{figure.era}</span>}
+        <h3 className="figure-card__name">{figure.name}</h3>
         <p className="figure-card__title" style={{ color: palette.primary }}>
           {figure.title}
         </p>
-        <p className="figure-card__summary">{figure.summary}</p>
-        <div className="figure-card__significance">
-          <p className="figure-card__significance-label">Significance</p>
-          <p className="figure-card__significance-text">{figure.significance}</p>
-        </div>
-      </article>
-    )
+      </div>
+      <p className="figure-card__summary">{figure.summary}</p>
+      <div className="figure-card__significance">
+        <p className="figure-card__significance-label">Why they matter</p>
+        <p className="figure-card__significance-text">{figure.significance}</p>
+      </div>
+    </div>
+  )
+
+  if (!showImage) {
+    return <article className="figure-card figure-card--text">{body}</article>
   }
 
-  const bottomShade = { background: 'rgba(20, 16, 12, 0.35)' } as CSSProperties
+  const bottomShade = { background: 'linear-gradient(180deg, transparent 60%, rgba(20,14,8,0.45) 100%)' } as CSSProperties
 
   return (
     <article className="figure-card">
@@ -50,19 +52,7 @@ export default function FigureCard({ figure, palette, pattern }: FigureCardProps
         <div className="figure-card__shade" style={bottomShade} />
         <span className="figure-card__era">{figure.era}</span>
       </div>
-      <div className="figure-card__body">
-        <div>
-          <h3 className="figure-card__name">{figure.name}</h3>
-          <p className="figure-card__title" style={{ color: palette.primary }}>
-            {figure.title}
-          </p>
-        </div>
-        <p className="figure-card__summary">{figure.summary}</p>
-        <div className="figure-card__significance">
-          <p className="figure-card__significance-label">Significance</p>
-          <p className="figure-card__significance-text">{figure.significance}</p>
-        </div>
-      </div>
+      {body}
     </article>
   )
 }

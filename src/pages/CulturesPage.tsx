@@ -81,9 +81,9 @@ export default function CulturesPage() {
       <div className="page__inner">
         <Reveal>
           <SectionHeading
-            eyebrow="The directory"
-            title="Tribes of Nigeria"
-            description="Seventeen of Nigeria's great peoples open their doors — festivals, textiles, rhythms and legends. Search a name, or wander the regions."
+            eyebrow="The index of peoples"
+            title="The Peoples of Nigeria"
+            description="Seventeen of the 250+ peoples who answer the name Nigeria — search a name, or wander by region. Every entry opens on a world."
           />
         </Reveal>
 
@@ -105,8 +105,8 @@ export default function CulturesPage() {
               type="search"
               value={query}
               onChange={event => setQuery(event.target.value)}
-              placeholder="Search tribes — e.g. Hausa, Edo, Ibibio, Kanuri…"
-              aria-label="Search tribes"
+              placeholder="Search the archive — Hausa, Edo, Ibibio, Kanuri…"
+              aria-label="Search the peoples"
               className="search-bar__input"
             />
             {query && (
@@ -134,26 +134,26 @@ export default function CulturesPage() {
             ))}
           </div>
           <p className="search-meta" aria-live="polite">
-            Showing <strong>{filtered.length}</strong> of {cultures.length} tribes
-            {zone ? ` in the ${zone}` : ''}
-            {query ? ` matching “${query}”` : ''}
+            Showing <strong>{filtered.length}</strong> of {cultures.length} peoples
+            {zone ? ` · ${zone}` : ''}
+            {query ? ` · matching “${query}”` : ''}
           </p>
         </Reveal>
 
         {filtered.length > 0 ? (
-          <div className="cultures-grid">
+          <div className="index-list">
             {filtered.map((culture, index) => (
-              <Reveal key={culture.id} delay={(index % 3) * 90} className="fill">
-                <CultureCard culture={culture} />
+              <Reveal key={culture.id} delay={(index % 5) * 60}>
+                <CultureCard culture={culture} index={index + 1} />
               </Reveal>
             ))}
           </div>
         ) : (
           <div className="search-empty">
-            <p className="search-empty__title">No tribe found for “{query}”.</p>
+            <p className="search-empty__title">No entry found for “{query}”.</p>
             <p className="search-empty__desc">
-              The atlas is still growing — and some peoples live under wider names. Try one of these, or
-              explore a region:
+              The archive is still growing — and some peoples answer to more than one name. Try one of
+              these, or wander a region instead:
             </p>
             {suggestions.length > 0 && (
               <div className="search-empty__suggest">
@@ -173,7 +173,7 @@ export default function CulturesPage() {
               </div>
             )}
             <div className="search-empty__zones">
-              <p className="search-empty__zones-title">Explore a region instead:</p>
+              <p className="search-empty__zones-title">Wander a region instead</p>
               <div className="zone-chips" style={{ justifyContent: 'center' }}>
                 {zones.map(name => (
                   <button
@@ -196,8 +196,8 @@ export default function CulturesPage() {
         <Reveal>
           <div className="page-note">
             <p>
-              Nigeria is home to <strong>250+ ethnic groups</strong> — this atlas celebrates seventeen of
-              its major peoples, and it keeps growing. More worlds are on the way.
+              Nigeria is home to <strong>250+ ethnic groups</strong> — this archive celebrates seventeen
+              of its great peoples, and it keeps growing. More worlds are on the way.
             </p>
           </div>
         </Reveal>
