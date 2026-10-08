@@ -30,7 +30,7 @@ export default function Footer() {
             <li>
               <Link to={routes.story}>The Nigerian Story</Link>
             </li>
-            {cultures.map(culture => (
+            {cultures.slice(0, 6).map(culture => (
               <li key={culture.id}>
                 <Link to={routes.tribe(culture.id)}>{culture.name}</Link>
               </li>
@@ -38,15 +38,19 @@ export default function Footer() {
           </ul>
         </nav>
         <div>
-          <p className="footer__heading">About this atlas</p>
+          <p className="footer__heading">About this project</p>
           <p className="footer__about">
             Built as a celebration of heritage. Nigeria is home to over 250 ethnic groups; this atlas
             features seventeen of its major peoples and their legends — with more worlds to come.
           </p>
-          <p className="footer__credit">Photography via Wikimedia Commons, shared under free licences.</p>
+          <p className="footer__credit">
+            Made by a Nigerian culture enthusiast as a personal study — a way to learn the country&apos;s
+            many peoples, and to keep their stories in one place. Photography via Wikimedia Commons,
+            shared under free licences.
+          </p>
         </div>
       </div>
-      <div className="footer__bottom">Nigerian Cultural Atlas · Crafted with pride for the living mosaic</div>
+      <div className="footer__bottom">Nigerian Cultural Atlas · Exploring the diversity of Nigeria</div>
     </footer>
   )
 }

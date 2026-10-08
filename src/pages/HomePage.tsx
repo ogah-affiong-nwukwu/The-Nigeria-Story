@@ -6,13 +6,15 @@ import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
 import StatCard from '../components/StatCard'
 import CultureChip from '../components/CultureChip'
+import HeroSlideshow from '../components/HeroSlideshow'
 
 const marqueeLine = `${marqueeWords.join(' • ')} • `
 
 export default function HomePage() {
   return (
     <main>
-      <section className="hero">
+      <section className="hero hero--media">
+        <HeroSlideshow />
         <div className="hero__content">
           <p className="hero__eyebrow animate-rise">Naija · A Living Heritage Atlas</p>
           <h1 className="hero__title animate-rise" style={{ '--d': '120ms' } as CSSProperties}>
@@ -21,8 +23,8 @@ export default function HomePage() {
             <span className="hero__accent">Cultural Atlas</span>
           </h1>
           <p className="hero__sub animate-rise" style={{ '--d': '240ms' } as CSSProperties}>
-            Explore Nigeria&apos;s Living Mosaic — a vibrant journey through the festivals, textiles,
-            rhythms and icons of a nation of over 250 peoples.
+            More than 250 peoples share the name Nigeria. This atlas walks through the festivals, cloth,
+            rhythms and icons of seventeen of its largest cultures — one page at a time.
           </p>
           <div className="hero__actions animate-rise" style={{ '--d': '360ms' } as CSSProperties}>
             <Link to={routes.tribes} className="btn btn-primary">

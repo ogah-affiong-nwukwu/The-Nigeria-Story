@@ -43,7 +43,7 @@ export default function ThemeToggle() {
       title={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
       className="theme-toggle"
     >
-      {theme === 'dark' ? <SunIcon className="icon-gold" /> : <MoonIcon className="icon-indigo" />}
+      {theme === 'dark' ? <SunIcon className="icon-gold" /> : <MoonIcon className="icon-moon" />}
     </button>
   )
 }
